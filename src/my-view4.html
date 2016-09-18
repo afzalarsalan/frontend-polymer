@@ -12,7 +12,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view4">
-  <template>
+    <template>
     <style include="shared-styles">
       :host {
         display: block;
@@ -34,12 +34,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 	margin:auto;    
 }
 
-#footer img{ 
+#footer{ 
 	width: 40%;
-	
-    height: 30px;
-    width: 40px;
-	
+    height: 50px;
+    width: 60px;
   } 
  #item-cost
  {
@@ -60,8 +58,8 @@ button {
 
     <div id="container">
 
-<div id ="tile-single"><a id= "site" href="site">
-  <img src="http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1801000/ff_1801696_xl.jpg"></a>
+<div id ="tile-single">
+  <img src="http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1801000/ff_1801696_xl.jpg">
    <div id="data"> 
        <p id="item-info"><b>This is an Awesome Shirt</p>
        <p id ="item-cost">$5.99</p><b></div> 
@@ -79,9 +77,9 @@ button {
  
   </template>
 
-  <script>
-    Polymer({
-      is: 'my-view4'
-    });
-  </script>
+    <script>
+        Polymer({
+            is: 'my-view4'
+        });
+    </script>
 </dom-module>
