@@ -34,8 +34,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
       #imageContainer {
-        min-width: 400px;
-        min-height: 300px;
+        max-width: 800px;
+        max-height: 600px;
         /*display: inline-block;*/
         display: none;
       }
@@ -400,7 +400,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             fileLoad: function(e) {
                 console.log('Files loading');
                 this.$.image.src = e.target.result;
-                this.$.imageContainer.style.display = 'block';
+                this.$.imageContainer.style.display = 'inline-block';
                 this.cropper = new Cropper(this.$.image);
                 this.$.selectorButton.style.display = 'none';
                 this.$.senderButton.style.display = 'inline-block';
