@@ -71,7 +71,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     </style>
 
     <app-location route="{{route}}"></app-location>
-    <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
+    <app-route id="router" route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}"></app-route>
 
     <!--<app-drawer-layout fullbleed>
       <!-- Drawer content -->
@@ -106,7 +106,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <my-view7 name="view7"></my-view7>
         <my-view8 name="view8"></my-view8>
         <my-view9 name="view9"></my-view9>
-        <my-viewloading name="viewloading" page="{{routeData.page}}"></my-viewloading>    
+        <my-viewloading name="viewloading" page="{{routeData.page}}" lastpage="{{this.lastpage}}"></my-viewloading>    
         <my-view404 name="view404"></my-view404>
       </iron-pages>
     </app-header-layout>
@@ -150,11 +150,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             },
 
             _routePageChanged: function(page) {
+                if(page === 'viewloading' && this.lastpage === 'view3') {
+                  this.page = 'view2';
+                  this.$.router.data.page = 'view2'
+                  this.lastpage = 'viewloading';
+                } 
+                else {
                 this.lastpage = this.page;
                 this.page = page || 'view2';
                 // if(this.page === 'view1') {
                 //   this.page == 'view2';
                 // }
+                }
             },
 
             _pageChanged: function(page) {
