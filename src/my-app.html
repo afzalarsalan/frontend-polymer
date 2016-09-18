@@ -97,7 +97,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       </app-header>
 
       <iron-pages selected="[[page]]" attr-for-selected="name" fallback-selection="view404" role="main">
-        <my-view1 name="view1"></my-view1>
+        <my-view1 name="view1" page="{{routeData.page}}"></my-view1>
         <my-view2 name="view2" page="{{routeData.page}}"></my-view2>
         <my-view3 name="view3" page="{{routeData.page}}"></my-view3>
         <my-view4 name="view4"></my-view4>
@@ -150,17 +150,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             },
 
             _routePageChanged: function(page) {
-                if(page === 'viewloading' && this.lastpage === 'view3') {
-                  this.page = 'view2';
-                  this.$.router.data.page = 'view2'
-                  this.lastpage = 'viewloading';
-                } 
-                else {
-                this.lastpage = this.page;
-                this.page = page || 'view2';
-                // if(this.page === 'view1') {
-                //   this.page == 'view2';
-                // }
+                if (page === 'viewloading' && this.lastpage === 'view3') {
+                    this.page = 'view2';
+                    this.$.router.data.page = 'view2'
+                    this.lastpage = 'viewloading';
+                } else {
+                    this.lastpage = this.page;
+                    this.page = page || 'view2';
+                    // if(this.page === 'view1') {
+                    //   this.page == 'view2';
+                    // }
                 }
             },
 

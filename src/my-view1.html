@@ -10,9 +10,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="shared-styles.html">
-
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
 <dom-module id="my-view1">
-  <template>
+    <template>
     <style include="shared-styles">
       :host {
         display: block;
@@ -26,12 +26,32 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <h1>Help Page</h1>
       <p>Please Look at the following video</p> 
       <p><img src = "http://www.netanimations.net/Moving-animated-picture-of-dancing-green-monkey.gif"/></p>
+      <paper-button raised on-click="nextStep">Got It</paper-button>
     </div>
+
+    
   </template>
 
-  <script>
-    Polymer({
-      is: 'my-view1'
-    });
-  </script>
+    <script>
+        Polymer({
+            is: 'my-view1',
+            properties: {
+                page: {
+                    type: String,
+                    notify: true,
+                    reflectToAttribute: true,
+
+                }
+
+            },
+
+
+            nextStep: function() {
+                this.page = 'view2';
+            }
+
+
+
+        });
+    </script>
 </dom-module>
