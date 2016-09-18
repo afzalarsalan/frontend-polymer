@@ -15,7 +15,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="stylesheet" href="../bower_components/cropperjs/dist/cropper.css">
 
 <dom-module id="my-view2">
-  <template>
+    <template>
     <style include="shared-styles">
       :host {
         display: block;
@@ -348,57 +348,57 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <div><paper-button id="senderButton" on-tap="nextStep" raised>Send Cropped Image</paper-button></div>
     <input on-change='newImage' id="selector" type="file" accept="image/*" capture="camera">
   </template>
-  <script src="../bower_components/cropperjs/dist/cropper.min.js"></script>
-  <script>
-    Polymer({
-      is: 'my-view2',
-      properties: {
-        selected: {
-          type: Boolean,
-          observer: '_imageLoaded'
-        },
-        cropper: {
-          type: Object
-        },
-        page: {
-          type: String,
-          notify: true,
-          reflectToAttribute: true
-        }
-      },
+    <script src="../bower_components/cropperjs/dist/cropper.min.js"></script>
+    <script>
+        Polymer({
+            is: 'my-view2',
+            properties: {
+                selected: {
+                    type: Boolean,
+                    observer: '_imageLoaded'
+                },
+                cropper: {
+                    type: Object
+                },
+                page: {
+                    type: String,
+                    notify: true,
+                    reflectToAttribute: true
+                }
+            },
 
-      attached: function() {
-        //this.cropper = new Cropper(this.$.image);
-        // this.$.image.src = "../images/test.jpeg";
-        // this.cropper = new Cropper(this.$.image);
-      },
+            attached: function() {
+                //this.cropper = new Cropper(this.$.image);
+                // this.$.image.src = "../images/test.jpeg";
+                // this.cropper = new Cropper(this.$.image);
+            },
 
-      openDialogBox: function() {
-        this.$.selector.click();
-      },
+            openDialogBox: function() {
+                this.$.selector.click();
+            },
 
-      newImage: function() {
-        console.log('Image Selected');
-        if (this.$.selector.files && this.$.selector.files[0]) {
-          var reader = new FileReader();
-          console.log('Begin reading');
-          this.listen(reader, 'load', 'fileLoad');
-          reader.readAsDataURL(this.$.selector.files[0]);
-        }
-      },
+            newImage: function() {
+                console.log('Image Selected');
+                if (this.$.selector.files && this.$.selector.files[0]) {
+                    var reader = new FileReader();
+                    console.log('Begin reading');
+                    this.listen(reader, 'load', 'fileLoad');
+                    reader.readAsDataURL(this.$.selector.files[0]);
+                }
+            },
 
-      fileLoad: function(e) {
-        console.log('Files loading');
-         this.$.image.src = e.target.result;
-         this.$.imageContainer.style.display = 'block';
-         this.cropper = new Cropper(this.$.image);
-         this.$.selectorButton.style.display = 'none';
-         this.$.senderButton.style.display = 'inline-block';
-      },
+            fileLoad: function(e) {
+                console.log('Files loading');
+                this.$.image.src = e.target.result;
+                this.$.imageContainer.style.display = 'block';
+                this.cropper = new Cropper(this.$.image);
+                this.$.selectorButton.style.display = 'none';
+                this.$.senderButton.style.display = 'inline-block';
+            },
 
-      nextStep: function() {
-        this.page = 'view3';
-      }
-    });
-  </script>
+            nextStep: function() {
+                this.page = 'viewloading';
+            }
+        });
+    </script>
 </dom-module>

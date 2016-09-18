@@ -50,8 +50,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 
             ready: function() {
-                setTimeout(console.log(0), 3000);
 
+                this.async(function next() {
+                    this.page = 'view3'
+                }, 3000)
+
+                /*
+                                window.setInterval(function next() {
+                                    this.page = 'view3'
+                                }, 3000);
+                */
 
 
             }
