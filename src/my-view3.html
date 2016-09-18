@@ -12,120 +12,124 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="shared-styles.html">
 
 <dom-module id="my-view3">
-  <template>
-    <style include="shared-styles">
-	
-	@media (max-width:700px) {
-	
-.tile{
-width:95%;
-height:160px;
-}	
-	
-.tile img {
-    height: 150px;
-    width: 150px;
-    border: none;
-    margin: 5px;
-    float: left;
-   
-}
-	
-	
-	}
-	
-      :host {
-        display: block;    
-		padding-left:0px;
-      }
-	  
-#container {
-width: 100%;
-height: 100%;
-border: none;
-margin:auto;
-}
+    <template>
+        <style include="shared-styles">
+            @media (max-width:700px) {
+                .tile {
+                    width: 95%;
+                    height: 160px;
+                }
+                .tile img {
+                    height: 150px;
+                    width: 150px;
+                    border: none;
+                    margin: 5px;
+                    float: left;
+                }
+            }
+            
+            :host {
+                display: block;
+                padding-left: 0px;
+            }
+            
+            #container {
+                width: 100%;
+                height: 100%;
+                border: none;
+                margin: auto;
+            }
+            
+            .tile img {
+                height: 150px;
+                width: 150px;
+                border: none;
+                margin: 5px;
+                float: left;
+            }
+            
+            .tile {
+                display: inline-block;
+                padding: 3px;
+                margin: 10px;
+            }
+            
+            .tile p {
+                text-align: right;
+            }
+            
+            #data img {
+                text-align: left;
+                height: 10px;
+                width: 35px;
+            }
+        </style>
 
+        <div id="container">
 
-.tile img {
-    height: 150px;
-    width: 150px;
-    border: none;
-    margin: 5px;
-    float: left;
-   
-}
-.tile{
-  display: inline-block;
-  padding:3px;
-  margin:10px;
-  }
- .tile p
- {
-   text-align:right;
-   }
- #data img{
-     text-align:left;
-    height: 10px;
-    width: 35px;
-     
-   }
- 
-    </style>
+            <div class="card tile">
+                <a on-click="testFunction">
+                    <img src="http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1801000/ff_1801696_xl.jpg"></a>
+                <div id="data">
+                    <img id="logo" src="http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
+                    <p>$5.99</p>
+                </div>
+            </div>
+            <div class="card tile">
+                <img src="https://cdn.shopify.com/s/files/1/0447/0021/products/32256_5796375e68a5d5.47013347_207-ATM-MAROON_large_c9291206-b4ec-41bd-a158-7143ed2d6af0.png">
+                <div id="data">
+                    <img id="logo" src="http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
+                    <p>$5.99</p>
+                </div>
+            </div>
+            <div class="card tile">
+                <img src="http://ecx.images-amazon.com/images/I/41KIAT54TvL.01_SL500_.jpg">
+                <div id="data">
+                    <img id="logo" src="http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
+                    <p>$5.99</p>
+                </div>
+            </div>
+            <div class="card tile">
+                <img src="https://s-media-cache-ak0.pinimg.com/564x/b0/1f/53/b01f5364c05bcaed8d59d75dacd0f938.jpg">
+                <div id="data">
+                    <img id="logo" src="http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
+                    <p>$5.99</p>
+                </div>
+            </div>
+            <div class="card tile">
+                <img src="http://assets.academy.com/mgen/45/10678445.jpg?is=640,640">
+                <div id="data">
+                    <img id="logo" src="http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
+                    <p>$5.99</p>
+                </div>
+            </div>
+            <div class="card tile">
+                <img src="https://cdn-img-3.wanelo.com/p/bc4/443/d63/06ec2c782912dfe21ea5e14/x354-q80.jpg">
+                <div id="data">
+                    <img id="logo" src="http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
+                    <p>$5.99</p>
+                </div>
+            </div>
+        </div>
+    </template>
 
-    <div id="container">
-
-<div  class="card tile"><a href="my-view4.html">
-  <img  src="http://images.footballfanatics.com/FFImage/thumb.aspx?i=/productImages/_1801000/ff_1801696_xl.jpg"></a>
-   <div id="data"> 
-       <img id="logo" src= "http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
-       <p>$5.99</p>
-   </div>
-</div>
-<div class="card tile">
-  <img  src="https://cdn.shopify.com/s/files/1/0447/0021/products/32256_5796375e68a5d5.47013347_207-ATM-MAROON_large_c9291206-b4ec-41bd-a158-7143ed2d6af0.png">
-   <div id="data"> 
-       <img id="logo" src= "http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
-       <p>$5.99</p>
-   </div>
-</div>
-<div  class="card tile">
-  <img  src="http://ecx.images-amazon.com/images/I/41KIAT54TvL.01_SL500_.jpg">
-   <div id="data"> 
-       <img id="logo" src= "http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
-       <p>$5.99</p>
-   </div>
-</div>
-<div  class="card tile">
-  <img  src="https://s-media-cache-ak0.pinimg.com/564x/b0/1f/53/b01f5364c05bcaed8d59d75dacd0f938.jpg">
-   <div id="data"> 
-       <img id="logo" src= "http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
-       <p>$5.99</p>
-   </div>
-</div>
-<div  class="card tile">
-  <img  src="http://assets.academy.com/mgen/45/10678445.jpg?is=640,640">
-   <div id="data"> 
-       <img id="logo" src= "http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
-       <p>$5.99</p>
-   </div>
-</div>
-<div class="card tile">
-  <img  src="https://cdn-img-3.wanelo.com/p/bc4/443/d63/06ec2c782912dfe21ea5e14/x354-q80.jpg">
-   <div id="data"> 
-       <img id="logo" src= "http://traveltogroup.com/wp-blog/wp-content/uploads/2014/02/HM-logo.png">
-       <p>$5.99</p>
-   </div>
-</div>
-
-
-
- </div>
-  </template>
-
-  <script>
+    <script>
     Polymer({
-      is: 'my-view3'
+      is: 'my-view3',
+
+      properties: {
+        page: {
+          type: String,
+          notify: true,
+          reflectToAttribute: true
+        }
+      },
+
+      testFunction: function() {
+          this.page = 'view4';
+      }
+
+
     });
   </script>
 </dom-module>
