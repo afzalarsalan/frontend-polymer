@@ -1,0 +1,28 @@
+<html><head><link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="shared-styles.html">
+
+</head><body><dom-module id="my-viewloading">
+    <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+
+      #cent{
+        width: 100%;
+        margins:auto;
+        	text-align: center;
+      }
+    </style>
+
+    <div id="cent">
+    
+      
+      <p><img style="height:150px;width:150px" src="../images/loading.gif"></p>
+    </div>
+  </template>
+
+    <script>Polymer({is:"my-viewloading",properties:{page:{type:String,notify:!0,reflectToAttribute:!0}},ready:function(){this.async(function(){this.page="view3"},3e3)}});</script>
+</dom-module></body></html>
