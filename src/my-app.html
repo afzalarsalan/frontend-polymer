@@ -119,14 +119,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
             properties: {
                 page: {
-                  type: String,
-                  reflectToAttribute: true,
-                  observer: '_pageChanged'
+                    type: String,
+                    reflectToAttribute: true,
+                    observer: '_pageChanged'
                 },
 
                 lastpage: {
-                  type: String,
-                  reflectToAttribute: true
+                    type: String,
+                    reflectToAttribute: true
                 },
 
                 visited: {
@@ -150,11 +150,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             },
 
             _routePageChanged: function(page) {
-              this.lastpage = this.page;
-              this.page = page || 'view2';
-              // if(this.page === 'view1') {
-              //   this.page == 'view2';
-              // }
+                this.lastpage = this.page;
+                this.page = page || 'view2';
+                // if(this.page === 'view1') {
+                //   this.page == 'view2';
+                // }
             },
 
             _pageChanged: function(page) {
